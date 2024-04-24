@@ -21,6 +21,7 @@ phases:
       - echo Build completed on `date`
 
 artifacts:
+  name: my-app-$(date +%Y-%m-%d)
   files:
     - dist/**/*
     - public/**/* 

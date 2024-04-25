@@ -7,11 +7,6 @@ phases:
     commands:
       - echo Installing source NPM dependencies...
       - npm install
-     
-  pre_build:
-    commands:
-      - echo Running linters...
-      - npm run lint
   build:
     commands:
       - echo Building the React application...

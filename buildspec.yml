@@ -17,7 +17,7 @@ build:
       - echo Build completed on `date`
 
 artifacts:
-  name: my-app-$(date +%Y-%m-%d)
+  name: beREELv2
   files:
     - dist/**/*
     - public/**/* 

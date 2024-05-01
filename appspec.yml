@@ -10,10 +10,6 @@ hooks:
     - location: scripts/stop_server.sh
       timeout: 300
       runas: ubuntu
-  BeforeInstall:
-    - location: scripts/cleanup.sh
-      timeout: 300
-      runas: ubuntu
   AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300

@@ -7,7 +7,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node app.js",
-        "build": "echo 'Prepare build if necessary' && exit 0",  // Dummy build script
+        "build": "echo 'Prepare build if necessary' && exit 0", 
         "prestart": "npm run build"
 
     },

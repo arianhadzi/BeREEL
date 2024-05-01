@@ -11,6 +11,10 @@ hooks:
       timeout: 300
       runas: ubuntu
   BeforeInstall:
+    - location: scripts/cleanup.sh
+      timeout: 300
+      runas: ubuntu
+  BeforeInstall:
     - location: scripts/cleanup_previous.sh
       timeout: 300
       runas: ubuntu

@@ -1,0 +1,32 @@
+<div id="album-details">
+    <img id="cover" src="{{cover}}" alt="no image found"><br>
+    <label>Artists</label>
+    <p id="artists-details">{{artists}}</p>
+    <label>Genres</label>
+    <ul id="genres-details">
+    </ul>
+    <label>Total Tracks</label>
+    <p id="total">{{total}}</p>
+    <label>Average Ranking:</label>
+    <p id="avg">{{avg}}</p>
+    <p>Submit a Ranking</p>
+    <form id="ranking" method="POST">
+        <label for="out_of_five">Ranking 1-5</label>
+        <input type="text" name='out_of_five' id="out_of_five"><br>
+        <label for="review">Review (Optional)</label>
+        <textarea name="review" id="review"></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+     <p id="error">{{{error}}}</p>
+    <script>
+            let data = {{{genres}}};
+            let list = document.getElementById("genres-details");
+            for (i = 0; i < data.length; ++i) {
+                let li = document.createElement('li');
+                li.innerText = data[i];
+                list.appendChild(li);
+            }
+    </script>
+    <a href="/album/{{album_id}}/rankings">View this Albums Rankings</a>
+    <a href="/user/{{userName}}">Back to user page</a>
+</div>

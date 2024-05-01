@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 .vs/slnx.sqlite
 .vs/VSWorkspaceState.json
+.vs/BeREEL/FileContentIndex/0ad19603-1868-49a6-ab4e-175571973f47.vsidx
+*.vsidx
+.vs/BeREEL/v17/.wsuo

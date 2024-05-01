@@ -6,7 +6,10 @@
     "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node app.js"
+        "start": "node app.js",
+        "build": "echo 'Prepare build if necessary' && exit 0",  // Dummy build script
+        "prestart": "npm run build"
+
     },
     "author": "Nusiba Zaman, Melissa Ozcan, Kate Choi, Diego Ramirez, Arian Hadzibrahimi",
     "license": "ISC",

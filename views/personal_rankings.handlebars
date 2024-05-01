@@ -1,4 +1,3 @@
-<h2>Your Rankings</h2>
 {{#if rankingAlreadyExists}}
     <p>You have already ranked the album previously. Please click edit button to edit your previous ranking.</p>
 {{/if}}
@@ -6,6 +5,7 @@
     <ul>
         {{#each userRankings.rankings}}
             <li>
+                <div class="ranking">
                 <p>User: <strong>{{userName}}</strong></p>
                 <p>Rating: {{this.rating}}</p>
                 {{#if this.review_provided}}
@@ -15,11 +15,11 @@
                 {{/if}}
                 <strong>{{this.albumName}}</strong>
                 <a href="/user/{{this.userName}}/rankings/{{this.id}}">View Ranking Details</a>
-
+                </div>
             </li>
         {{/each}}
     </ul>
+<ul><li><li><a href="/user/{{userName}}">Back to user page</a></li></li></ul>
 {{else}}
     <p>No rankings yet. Start ranking some albums!</p>
 {{/if}}
-<a href="/user/{{userName}}">Back to user page</a>

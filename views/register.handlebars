@@ -4,16 +4,18 @@
     <p>Password must be at least 8 characters long, no spaces, and must contain at least one of the following: uppercase letter, number, special character.</p>
 
     <form id="register-form" action="/register" method="POST">
-        <label for="user"><b>Username: </b></label>
-        <input type="text" placeholder="Enter Username" name="user" id="user" required>
+    <ul>
+        <li><label for="user"><b>Username: </b></label>
+        <input type="text" placeholder="Enter Username" name="user" id="user" required></li>
 
-        <label for="pass"><b>Password: </b></label>
-        <input type="password" placeholder="Enter Password" name="pass" id="pass" required>
+        <li><label for="pass"><b>Password: </b></label>
+        <input type="password" placeholder="Enter Password" name="pass" id="pass" required></li>
 
-        <label for="confirm-pass"><b>Confirm Password: </b></label>
-        <input type="password" placeholder="Confirm Password" name="confirm-pass" id="confirm-pass" required>
+        <li><label for="confirm-pass"><b>Confirm Password: </b></label>
+        <input type="password" placeholder="Confirm Password" name="confirm-pass" id="confirm-pass" required></li>
 
         <button type="submit">Create Account</button>
+    </ul>
     </form>
 </div>
 <div class="container">

@@ -1,13 +1,15 @@
 
 <div class="container">
     <form id="login-form" action="/login" method="POST">
-        <label for="user"><b>Username: </b></label>
-        <input type="text" placeholder="Enter Username" name="user" id="user" required />
+    <ul>
+        <li><label for="user"><b>Username: </b></label>
+        <input type="text" placeholder="Enter Username" name="user" id="user" required /></li>
 
-        <label for="pass"><b>Password: </b></label>
-        <input type="password" placeholder="Enter Password" name="pass" id="pass" required />
+        <li><label for="pass"><b>Password: </b></label>
+        <input type="password" placeholder="Enter Password" name="pass" id="pass" required /></li>
 
-        <button type="submit">Login</button>
+        <li><button type="submit">Login</button></li>
+    </ul>
     </form>
     <p>{{{error}}}</p>
 </div>

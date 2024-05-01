@@ -1,0 +1,38 @@
+version: 0.0
+os: linux
+files:
+  - source: /dist
+    destination: /var/www/html
+  - source: /public
+    destination: /var/www/html
+hooks:
+  ApplicationStop:
+    - location: scripts/stop_server.sh
+      timeout: 300
+      runas: ubuntu
+  BeforeInstall:
+    - location: scripts/cleanup.sh
+      timeout: 300
+      runas: ubuntu
+  BeforeInstall:
+    - location: scripts/cleanup_previous.sh
+      timeout: 300
+      runas: ubuntu
+    - location: scripts/backup_current.sh
+      timeout: 300
+      runas: ubuntu
+  AfterInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: ubuntu
+    - location: scripts/migrate_database.sh # if database migration is needed
+      timeout: 300
+      runas: ubuntu
+  ApplicationStart:
+    - location: scripts/start_server.sh
+      timeout: 300
+      runas: ubuntu
+  ValidateService:
+    - location: scripts/validate_service.sh
+      timeout: 300
+      runas: ubuntu

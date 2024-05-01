@@ -1,0 +1,18 @@
+{{#if edit }}
+    <form id="edit-form" method="POST">
+        <label for="editRanking">Ranking</label>
+        <input type="text" id="editRanking" name="editRanking"/><br>
+        <label for="editReview">Review</label>
+        <input type="text" id="editReview" name="editReview"/><br>
+        <button type="submit">Submit</button>
+    </form>
+{{else}}
+    {{#if comment }}  
+        <form id="comment-form" method="POST">
+            <label for="comment">Comment</label>
+            <input type="text" id="comment" name="comment"/><br>
+            <button type="submit">Submit</button>
+        </form>
+    {{/if}}
+{{/if}}
+<p id="error" class="error" hidden></p>

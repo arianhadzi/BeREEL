@@ -1,9 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: dist
+  - source: /dist
     destination: /var/www/html
-  - source: public
+  - source: /public
     destination: /var/www/html
 hooks:
   ApplicationStop:

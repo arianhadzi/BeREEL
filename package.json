@@ -1,7 +1,7 @@
 {
     "name": "album-pulse",
     "version": "1.0.0",
-    "description": "CS 546 - Group Project",
+    "description": "SSW 590 - Group Project",
     "main": "app.js",
     "type": "module",
     "scripts": {
